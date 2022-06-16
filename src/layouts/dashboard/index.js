@@ -34,6 +34,7 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
@@ -45,41 +46,47 @@ function Dashboard() {
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
-              <ComplexStatisticsCard color="dark" icon="Google" title="Google Play Store" />
+              <Link to="/dashboard/SIBMirrorPlus">
+                <ComplexStatisticsCard color="dark" icon="Google" title="SIB Mirror +" />
+              </Link>
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
-              <ComplexStatisticsCard icon="Apple" title="Apple Play Store" />
+              <ComplexStatisticsCard icon="Apple" title="SIB UPI POS" />
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
-              <ComplexStatisticsCard color="success" icon="Twitter" title="Twitter Reviews" />
+              <ComplexStatisticsCard
+                color="success"
+                icon="Twitter"
+                title="SIB Bharat QR Merchant App"
+              />
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
-              <ComplexStatisticsCard color="primary" icon="Facebook" title="Facebook Reviews" />
+              <ComplexStatisticsCard color="primary" icon="Facebook" title="SIB BHIM Aadhaar Pay" />
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
+            {/* <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="primary"
                 icon="AddLocationAlt"
                 title="Google Map reviews for each branch"
               />
-            </MDBox>
+            </MDBox> */}
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
+            {/* <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="primary"
                 icon="InsertEmoticon"
                 title="TRIAL Sentiment Analysis"
               />
-            </MDBox>
+            </MDBox> */}
           </Grid>
         </Grid>
         <MDBox mt={4.5}>
@@ -126,10 +133,10 @@ function Dashboard() {
         <MDBox>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} lg={8}>
-              <Projects />
+              {/* <Projects /> */}
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <OrdersOverview />
+              {/* <OrdersOverview /> */}
             </Grid>
           </Grid>
         </MDBox>

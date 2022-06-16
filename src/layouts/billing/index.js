@@ -11,7 +11,7 @@ import Neutralimg from "../../assets/images/no_express.gif";
 
 const sentiment = new Sentiment();
 
-function Billing() {
+function Billing() { 
   const [phrase, setphrase] = useState("");
   const [score, setscore] = useState(null);
 

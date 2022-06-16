@@ -37,6 +37,8 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
+import SIBMirrorPlus from "layouts/dashboard/SIBMirrorPlus";
+
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";
 import Notifications from "layouts/notifications";
@@ -113,13 +115,14 @@ const routes = [
     route: "/authentication/sign-up",
     component: <SignUp />,
   },
+
   {
     type: "collapse",
-    name: "Sign Up",
-    key: "sign-up",
-    icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/authentication/sign-up",
-    component: <SignUp />,
+    name: "SIB Mirror Plus",
+    key: "SIBMirrorPlus",
+    icon: <Icon fontSize="small">dashboard</Icon>,
+    route: "/dashboard/SIBMirrorPlus",
+    component: <SIBMirrorPlus />,
   },
 ];
 
