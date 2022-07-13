@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 
 import "./style.css";
 import Sentiment from "sentiment";
+import DashboardNavbar from "../../examples/Navbars/DashboardNavbar";
 import Positiveimg from "../../assets/images/emoji_1.gif";
 import Negativeimg from "../../assets/images/sad_emoji.gif";
 import Neutralimg from "../../assets/images/no_express.gif";
@@ -20,6 +21,8 @@ function Billing() {
   }, [phrase]);
   return (
     <div className="main">
+    <DashboardNavbar />
+
       <div className="main-container">
         <h3 className="heading">Sentiment Analysis</h3>
         <input value={phrase} className="inputbox" onChange={(e) => setphrase(e.target.value)} />
