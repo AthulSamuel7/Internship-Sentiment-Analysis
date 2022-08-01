@@ -37,6 +37,13 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
+import SIBMirrorPlusAndroid from "layouts/screens/SIBMirrorPlusAndroid";
+import SIBMirrorPlusApple from "layouts/screens/SIBMirrorPlusApple";
+import UPIPOSAndroid from "layouts/screens/UPIPOSAndroid";
+import BharatQRMerchantAppAndroid from "layouts/screens/BharatQRMerchantAppAndroid";
+import BHIMAadhaarPayAndroid from "layouts/screens/BHIMAadhaarPayAndroid";
+import HRMSAndroid from "layouts/screens/HRMSAndroid";
+
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";
 import Notifications from "layouts/notifications";
@@ -61,8 +68,8 @@ const routes = [
     name: "Apple Play Store Review",
     key: "tables",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
-    component: <Tables />,
+    route: "/screens/SIBMirrorPlusApple",
+    component: <SIBMirrorPlusApple />,
   },
   {
     type: "collapse",
@@ -113,13 +120,46 @@ const routes = [
     route: "/authentication/sign-up",
     component: <SignUp />,
   },
+
   {
-    type: "collapse",
-    name: "Sign Up",
-    key: "sign-up",
-    icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/authentication/sign-up",
-    component: <SignUp />,
+    // type: "collapse",
+    // name: "SIB Mirror Plus",
+    key: "SIBMirrorPlus",
+    // icon: <Icon fontSize="small">dashboard</Icon>,
+    route: "/screens/SIBMirrorPlusAndroid",
+    component: <SIBMirrorPlusAndroid />,
+  },
+  {
+    // type: "collapse",
+    // name: "SIB Mirror Plus",
+    key: "UPIPOSAndroid",
+    // icon: <Icon fontSize="small">dashboard</Icon>,
+    route: "/screens/UPIPOSAndroid",
+    component: <UPIPOSAndroid />,
+  },
+  {
+    // type: "collapse",
+    // name: "SIB Mirror Plus",
+    key: "BharatQRMerchantAppAndroid",
+    // icon: <Icon fontSize="small">dashboard</Icon>,
+    route: "/screens/BharatQRMerchantAppAndroid",
+    component: <BharatQRMerchantAppAndroid />,
+  },
+  {
+    // type: "collapse",
+    // name: "SIB Mirror Plus",
+    key: "BHIMAadhaarPayAndroid",
+    // icon: <Icon fontSize="small">dashboard</Icon>,
+    route: "/screens/BHIMAadhaarPayAndroid",
+    component: <BHIMAadhaarPayAndroid />,
+  },
+  {
+    // type: "collapse",
+    // name: "SIB Mirror Plus",
+    key: "HRMSAndroid",
+    // icon: <Icon fontSize="small">dashboard</Icon>,
+    route: "/screens/HRMSAndroid",
+    component: <HRMSAndroid />,
   },
 ];
 

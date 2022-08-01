@@ -1,19 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
 import Grid from "@mui/material/Grid";
 
 // Material Dashboard 2 React components
@@ -34,6 +18,7 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
@@ -44,42 +29,82 @@ function Dashboard() {
       <MDBox py={3}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard color="dark" icon="Google" title="Google Play Store" />
+            <MDBox
+              mb={1.5}
+              component={Link}
+              to="/screens/SIBMirrorPlusAndroid"
+              variant="button"
+              color="info"
+              fontWeight="medium"
+              textGradient
+            >
+              <ComplexStatisticsCard color="dark" icon="Google" title="SIB Mirror + Android" />
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard icon="Apple" title="Apple Play Store" />
+            <MDBox
+              mb={1.5}
+              component={Link}
+              to="/screens/UPIPOSAndroid"
+              variant="button"
+              color="info"
+              fontWeight="medium"
+              textGradient
+            >
+              <ComplexStatisticsCard icon="Apple" title="SIB UPI POS" />
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard color="success" icon="Twitter" title="Twitter Reviews" />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard color="primary" icon="Facebook" title="Facebook Reviews" />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
+            <MDBox
+              mb={1.5}
+              component={Link}
+              to="/screens/BharatQRMerchantAppAndroid"
+              variant="button"
+              color="info"
+              fontWeight="medium"
+              textGradient
+            >
               <ComplexStatisticsCard
-                color="primary"
-                icon="AddLocationAlt"
-                title="Google Map reviews for each branch"
+                color="success"
+                icon="Twitter"
+                title="SIB Bharat QR Merchant App"
               />
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
+            <MDBox
+              mb={1.5}
+              component={Link}
+              to="/screens/BHIMAadhaarPayAndroid"
+              variant="button"
+              color="info"
+              fontWeight="medium"
+              textGradient
+            >
+              <ComplexStatisticsCard color="primary" icon="Facebook" title="SIB BHIM Aadhaar Pay" />
+            </MDBox>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <MDBox
+              mb={1.5}
+              component={Link}
+              to="/screens/HRMSAndroid"
+              variant="button"
+              color="info"
+              fontWeight="medium"
+              textGradient
+            >
+              <ComplexStatisticsCard color="primary" icon="Facebook" title="HRMS" />
+            </MDBox>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            {/* <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="primary"
                 icon="InsertEmoticon"
                 title="TRIAL Sentiment Analysis"
               />
-            </MDBox>
+            </MDBox> */}
           </Grid>
         </Grid>
         <MDBox mt={4.5}>
@@ -126,10 +151,10 @@ function Dashboard() {
         <MDBox>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} lg={8}>
-              <Projects />
+              {/* <Projects /> */}
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <OrdersOverview />
+              {/* <OrdersOverview /> */}
             </Grid>
           </Grid>
         </MDBox>
