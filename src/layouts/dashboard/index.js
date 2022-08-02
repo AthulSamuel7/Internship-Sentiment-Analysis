@@ -97,15 +97,7 @@ function Dashboard() {
               <ComplexStatisticsCard color="primary" icon="Facebook" title="HRMS" />
             </MDBox>
           </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            {/* <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="primary"
-                icon="InsertEmoticon"
-                title="TRIAL Sentiment Analysis"
-              />
-            </MDBox> */}
-          </Grid>
+          <Grid item xs={12} md={6} lg={3} />
         </Grid>
         <MDBox mt={4.5}>
           <Grid container spacing={3}>

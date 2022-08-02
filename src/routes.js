@@ -43,6 +43,7 @@ import UPIPOSAndroid from "layouts/screens/UPIPOSAndroid";
 import BharatQRMerchantAppAndroid from "layouts/screens/BharatQRMerchantAppAndroid";
 import BHIMAadhaarPayAndroid from "layouts/screens/BHIMAadhaarPayAndroid";
 import HRMSAndroid from "layouts/screens/HRMSAndroid";
+import GoogleMapReview from "layouts/screens/GoogleMapReview";
 
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";
@@ -70,6 +71,14 @@ const routes = [
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/screens/SIBMirrorPlusApple",
     component: <SIBMirrorPlusApple />,
+  },
+  {
+    type: "collapse",
+    name: "Google Maps Review",
+    key: "tables",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/screens/GoogleMapReview",
+    component: <GoogleMapReview />,
   },
   {
     type: "collapse",
