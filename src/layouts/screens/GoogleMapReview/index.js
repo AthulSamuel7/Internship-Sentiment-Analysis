@@ -163,7 +163,7 @@ function GoogleMapReview() {
                 State: <span>{address.state}</span>
               </p>
               <p>
-                Zip: <span>{address.zip}</span>
+                Zip : <span>{address.zip}</span>
               </p>
               <p>
                 Country: <span>{address.country}</span>
