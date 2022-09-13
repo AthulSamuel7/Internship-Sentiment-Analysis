@@ -1,4 +1,7 @@
 import Grid from "@mui/material/Grid";
+import React, { useState } from "react";
+import Axios from "axios";
+import { Form } from "react-bootstrap";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -19,9 +22,35 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 function HRMSAndroid() {
   const { sales, tasks } = reportsLineChartData;
+
+  const url = "http://127.0.0.11:5000/MainMenu";
+  const [data, setData] = useState({
+    name: "",
+    date: "",
+    iduser: "",
+  });
+
+  function submit(e) {
+    e.preventDefault();
+    Axios.post(url, {
+      name: data.name,
+      date: data.date,
+      iduser: data.iduser,
+    }).then((res) => {
+      console.log(res.data);
+    });
+  }
+
+  function handle(e) {
+    const newdata = { ...data };
+    newdata[e.target.id] = e.target.value;
+    setData(newdata);
+    console.log(newdata);
+  }
 
   return (
     <DashboardLayout>
@@ -49,73 +78,43 @@ function HRMSAndroid() {
               />
             </MDBox>
           </Grid>
+
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
+            {/* <MDBox mb={1.5}>
               <ComplexStatisticsCard color="primary" icon="Facebook" title="SIB BHIM Aadhaar Pay" />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            {/* <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="primary"
-                icon="AddLocationAlt"
-                title="Google Map reviews for each branch"
-              />
             </MDBox> */}
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            {/* <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="primary"
-                icon="InsertEmoticon"
-                title="TRIAL Sentiment Analysis"
+            <Form onsubmit={(e) => submit(e)}>
+              <input
+                onChange={(e) => handle(e)}
+                id="name"
+                value={data.name}
+                placeholder="name"
+                type="text"
               />
-            </MDBox> */}
-            <img src="http://127.0.0.6:5000/fig1.png" alt="icons" />;
-            <img src="http://127.0.0.6:5000/fig2.png" alt="icons" />;
+              <input
+                onChange={(e) => handle(e)}
+                id="date"
+                value={data.date}
+                placeholder="date"
+                type="text"
+              />
+              <input
+                onChange={(e) => handle(e)}
+                id="iduser"
+                value={data.iduser}
+                placeholder="iduser"
+                type="text"
+              />
+              <Button>Submit</Button>
+            </Form>
+          </Grid>
+
+          <Grid item xs={12} md={6} lg={3}>
+            {/* <img src="http://127.0.0.6:5000/fig1.png" alt="icons" />;
+            <img src="http://127.0.0.6:5000/fig2.png" alt="icons" />; */}
           </Grid>
         </Grid>
-        <MDBox mt={4.5}>
-          {/* <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
-                <ReportsBarChart
-                  color="info"
-                  title="website views"
-                  description="Last Campaign Performance"
-                  date="campaign sent 2 days ago"
-                  chart={reportsBarChartData}
-                />
-              </MDBox>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
-                <ReportsLineChart
-                  color="success"
-                  title="daily sales"
-                  description={
-                    <>
-                      (<strong>+15%</strong>) increase in today sales.
-                    </>
-                  }
-                  date="updated 4 min ago"
-                  chart={sales}
-                />
-              </MDBox>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
-                <ReportsLineChart
-                  color="dark"
-                  title="completed tasks"
-                  description="Last Campaign Performance"
-                  date="just updated"
-                  chart={tasks}
-                />
-              </MDBox>
-            </Grid>
-          </Grid> */}
-        </MDBox>
+        <MDBox mt={4.5} />
         <MDBox>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} lg={8}>

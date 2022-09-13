@@ -51,7 +51,7 @@ function Dashboard() {
               fontWeight="medium"
               textGradient
             >
-              <ComplexStatisticsCard icon="Apple" title="SIB UPI POS" />
+              <ComplexStatisticsCard icon="Google" title="SIB UPI POS" />
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
@@ -66,7 +66,7 @@ function Dashboard() {
             >
               <ComplexStatisticsCard
                 color="success"
-                icon="Twitter"
+                icon="Google"
                 title="SIB Bharat QR Merchant App"
               />
             </MDBox>
@@ -81,7 +81,7 @@ function Dashboard() {
               fontWeight="medium"
               textGradient
             >
-              <ComplexStatisticsCard color="primary" icon="Facebook" title="SIB BHIM Aadhaar Pay" />
+              <ComplexStatisticsCard color="primary" icon="Google" title="SIB BHIM Aadhaar Pay" />
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
@@ -94,14 +94,14 @@ function Dashboard() {
               fontWeight="medium"
               textGradient
             >
-              <ComplexStatisticsCard color="primary" icon="Facebook" title="HRMS" />
+              <ComplexStatisticsCard color="primary" icon="Google" title="HRMS" />
             </MDBox>
           </Grid>
           <Grid item xs={12} md={6} lg={3} />
         </Grid>
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={4}>
+            {/* <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsBarChart
                   color="info"
@@ -111,9 +111,9 @@ function Dashboard() {
                   chart={reportsBarChartData}
                 />
               </MDBox>
-            </Grid>
+            </Grid> */}
             <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
+              {/* <MDBox mb={3}>
                 <ReportsLineChart
                   color="success"
                   title="daily sales"
@@ -125,10 +125,10 @@ function Dashboard() {
                   date="updated 4 min ago"
                   chart={sales}
                 />
-              </MDBox>
+              </MDBox> */}
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <MDBox mb={3}>
+              {/* <MDBox mb={3}>
                 <ReportsLineChart
                   color="dark"
                   title="completed tasks"
@@ -136,7 +136,7 @@ function Dashboard() {
                   date="just updated"
                   chart={tasks}
                 />
-              </MDBox>
+              </MDBox> */}
             </Grid>
           </Grid>
         </MDBox>

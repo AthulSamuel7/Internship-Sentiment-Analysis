@@ -29,31 +29,31 @@ function SIBMirrorPlusAndroid() {
       <MDBox py={3}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
+            {/* <MDBox mb={1.5}>
               <Link to="/profile">
                 <ComplexStatisticsCard color="dark" icon="Google" title="SIB Mirror +" />
               </Link>
-            </MDBox>
+            </MDBox> */}
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
+            {/* <MDBox mb={1.5}>
               <ComplexStatisticsCard icon="Apple" title="SIB UPI POS" />
-            </MDBox>
+            </MDBox> */}
           </Grid>
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
+            {/* <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="success"
                 icon="Twitter"
                 title="SIB Bharat QR Merchant App"
               />
-            </MDBox>
+            </MDBox> */}
           </Grid>
-          <Grid item xs={12} md={6} lg={3}>
+          {/* <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard color="primary" icon="Facebook" title="SIB BHIM Aadhaar Pay" />
             </MDBox>
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} md={6} lg={3}>
             {/* <MDBox mb={1.5}>
               <ComplexStatisticsCard
@@ -73,6 +73,9 @@ function SIBMirrorPlusAndroid() {
             </MDBox> */}
             <img src="http://127.0.0.6:5000/fig1.png" alt="icons" />;
             <img src="http://127.0.0.6:5000/fig2.png" alt="icons" />;
+            <img src="http://127.0.0.6:5000/fig3.png" alt="icons" />;
+            <img src="http://127.0.0.6:5000/fig4.png" alt="icons" />;
+            <img src="http://127.0.0.6:5000/fig5.png" alt="icons" />;
           </Grid>
         </Grid>
         <MDBox mt={4.5}>
